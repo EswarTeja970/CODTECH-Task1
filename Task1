@@ -1,48 +1,43 @@
 Basic logic gates:
-              Module allgates(A,B,not1,or2,and3,nor4,nand5,xor6,xnor);
-		Input A;
-		Input B;
-                             output not 1;
-                             output or 2;
-                             output and 3;
-                             output nor 4;
-                             output nand 5;
-                             output xor 6;
-                             output xnor 7;
 
-                             reg not 1;
-reg or2 ;
-reg and3;
-reg nor4;
-reg nand5;
-reg xor6;
-reg xnor7;
+module allgates(
+    input  wire A,
+    input  wire B,
+    output reg  not1,
+    output reg  or2,
+    output reg  and3,
+    output reg  nor4,
+    output reg  nand5,
+    output reg  xor6,
+    output reg  xnor7
+);
 
+always @(*) begin
+    not1  = ~A;
+    or2   = A | B;
+    and3  = A & B;
+    nor4  = ~(A | B);
+    nand5 = ~(A & B);
+    xor6  = A ^ B;
+    xnor7 = ~(A ^ B);
+end
+endmodule
 
-always@(A or B)
-begin
-            not1 = ~ A;
-            or2 = A | B;
-            and3 = A & B;
-            nor4 = ~ (A | B);
-            nand5 = ~(A & B);
-            xor6 = (A ^ B);
-            xnor7 = ~ (A ^ B);
-end.
-
-	Endmodule
 
 
 /*8 bit adder Code*/
 
-module adder8bit ( 
-input [7:0] a,
-input [7:0] b, 
-input cin
-output reg [7:0] sum, 
-output reg cout
+module adder8bit (
+    input  [7:0] a,
+    input  [7:0] b,
+    input        cin,
+    output reg [7:0] sum,
+    output reg       cout
 );
-always@(a,b,cin) (cout,sum)=a+b+cin
+
+always @(*) begin
+    {cout, sum} = a + b + cin;
+end
 
 endmodule
 
