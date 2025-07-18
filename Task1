@@ -42,7 +42,7 @@ end
 endmodule
 
 
-8*1 mux:
+/* 8*1 mux: */
 
 
  Module mux(d,sel,z);
