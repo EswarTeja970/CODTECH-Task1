@@ -13,4 +13,8 @@
 
 The Wave forms of the task
 
-![image](https://github.com/user-attachments/assets/155ad059-276f-4a00-b307-4128cc07412f)
+Basic Gates:
+
+<img width="753" height="327" alt="image" src="https://github.com/user-attachments/assets/76ccb8f7-e481-4f25-8072-027694ad1c5f" />
+
+
